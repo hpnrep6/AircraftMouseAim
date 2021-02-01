@@ -2,12 +2,12 @@
 
 importer="scene"
 type="PackedScene"
-path="res://.import/aircraftsimple.glb-92db805c1a743630b73e2a332351a505.scn"
+path="res://.import/aircraftsimple.glb-ac70983f44523c135610d6bee14270d3.scn"
 
 [deps]
 
-source_file="res://aircraftsimple.glb"
-dest_files=[ "res://.import/aircraftsimple.glb-92db805c1a743630b73e2a332351a505.scn" ]
+source_file="res://Models/aircraftsimple.glb"
+dest_files=[ "res://.import/aircraftsimple.glb-ac70983f44523c135610d6bee14270d3.scn" ]
 
 [params]
 
