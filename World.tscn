@@ -1,0 +1,101 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://grid.png" type="Texture" id=1]
+[ext_resource path="res://Aircraft/Aircraft.tscn" type="PackedScene" id=2]
+
+[sub_resource type="BoxShape" id=6]
+extents = Vector3( 10, 1, 10 )
+
+[sub_resource type="CubeMesh" id=7]
+size = Vector3( 20, 2, 20 )
+
+[sub_resource type="SpatialMaterial" id=8]
+albedo_texture = ExtResource( 1 )
+uv1_scale = Vector3( 300, 300, 1 )
+
+[sub_resource type="BoxShape" id=10]
+
+[sub_resource type="CubeMesh" id=9]
+
+[sub_resource type="SpatialMaterial" id=11]
+albedo_texture = ExtResource( 1 )
+uv1_scale = Vector3( 400, 400, 1 )
+
+[node name="World" type="Spatial"]
+
+[node name="Aircraft" parent="." instance=ExtResource( 2 )]
+
+[node name="StaticBody" type="StaticBody" parent="."]
+transform = Transform( 100, 0, 0, 0, 5, 0, 0, 0, 100, 0, -9.54431, 2.02696 )
+
+[node name="CollisionShape" type="CollisionShape" parent="StaticBody"]
+shape = SubResource( 6 )
+
+[node name="MeshInstance2" type="MeshInstance" parent="StaticBody/CollisionShape"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+mesh = SubResource( 7 )
+material/0 = SubResource( 8 )
+
+[node name="DirectionalLight" type="DirectionalLight" parent="."]
+transform = Transform( 0.866025, -0.25, 0.433013, 0, 0.866025, 0.5, -0.5, -0.433013, 0.75, 0, 16, 0 )
+shadow_enabled = true
+
+[node name="Piller" type="StaticBody" parent="."]
+transform = Transform( 5, 0, 0, 0, 20, 0, 0, 0, 5, -36.545, 14.2825, -27.104 )
+
+[node name="Collider" type="CollisionShape" parent="Piller"]
+shape = SubResource( 10 )
+
+[node name="Mesh" type="MeshInstance" parent="Piller/Collider"]
+mesh = SubResource( 9 )
+material/0 = SubResource( 11 )
+
+[node name="Piller2" type="StaticBody" parent="."]
+transform = Transform( 5, 0, 0, 0, 20, 0, 0, 0, 5, 37.1297, 14.2825, 48.5235 )
+
+[node name="Collider" type="CollisionShape" parent="Piller2"]
+shape = SubResource( 10 )
+
+[node name="Mesh" type="MeshInstance" parent="Piller2/Collider"]
+mesh = SubResource( 9 )
+material/0 = SubResource( 11 )
+
+[node name="Piller3" type="StaticBody" parent="."]
+transform = Transform( 5, 0, 0, 0, 20, 0, 0, 0, 5, 36.2158, 14.2825, -37.5906 )
+
+[node name="Collider" type="CollisionShape" parent="Piller3"]
+shape = SubResource( 10 )
+
+[node name="Mesh" type="MeshInstance" parent="Piller3/Collider"]
+mesh = SubResource( 9 )
+material/0 = SubResource( 11 )
+
+[node name="Piller4" type="StaticBody" parent="."]
+transform = Transform( 3.58747, 0, 3.48282, 0, 20, 0, -3.48282, 0, 3.58747, -27.9074, 4.82566, -84.1169 )
+
+[node name="Collider" type="CollisionShape" parent="Piller4"]
+shape = SubResource( 10 )
+
+[node name="Mesh" type="MeshInstance" parent="Piller4/Collider"]
+mesh = SubResource( 9 )
+material/0 = SubResource( 11 )
+
+[node name="Piller5" type="StaticBody" parent="."]
+transform = Transform( 4.74628, 0, -1.57253, 0, 20, 0, 1.57253, 0, 4.74628, -40.5522, 4.82567, 75.8482 )
+
+[node name="Collider" type="CollisionShape" parent="Piller5"]
+shape = SubResource( 10 )
+
+[node name="Mesh" type="MeshInstance" parent="Piller5/Collider"]
+mesh = SubResource( 9 )
+material/0 = SubResource( 11 )
+
+[node name="Piller6" type="StaticBody" parent="."]
+transform = Transform( 4.74628, 0, -1.57253, 0, 20, 0, 1.57253, 0, 4.74628, 70.8521, -3.66475, 2.18487 )
+
+[node name="Collider" type="CollisionShape" parent="Piller6"]
+shape = SubResource( 10 )
+
+[node name="Mesh" type="MeshInstance" parent="Piller6/Collider"]
+mesh = SubResource( 9 )
+material/0 = SubResource( 11 )
