@@ -1,3 +1,3 @@
 ## Description
 
-Make a rigidbody turn towards a target rotation and point by applying torque to it
+Physics based aircraft aiming system that turns towards the mouse position by applying torque to the aircraft's rigidbody.
