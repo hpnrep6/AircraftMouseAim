@@ -23,7 +23,7 @@ func turnTowards():
 	# Convert target's location to local world position
 	var local = to_local(target.global_transform.origin);
 
-	# Add torque towards the target. This torque should *probably* be the ideal torque, so
+	# Add torque towards the target. This vector should *probably* be the ideal angular velocity, so
 	# some counter torque needs to be added if no dampening is added
 	
 	# This turns the body in the offset in the y direction around the x axis
